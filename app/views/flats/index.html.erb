@@ -1,0 +1,18 @@
+<h1>Flats#index</h1>
+<ul>
+</ul>
+
+<div class="cards">
+  <% @flats.each do |flat| %>
+    <%= link_to flat_path(flat["id"]), style: "text-decoration: none;" do  %>
+      <div class="card-trip">
+        <img src="<%= flat['imageUrl'] %>" />
+        <div class="card-trip-infos">
+          <%= flat["name"] %>
+          <h2 class="card-trip-pricing"><%= flat["price"] %> €</h2>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+</div>
+
